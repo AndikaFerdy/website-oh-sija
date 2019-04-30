@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.sass$/,
+        test: /((.scss)|(.css))$/,
         use: [
           {
             loader: 'style-loader',
@@ -39,7 +39,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts'],
+    extensions: ['.ts', '.js', '.jsx'],
   },
 
   plugins: [
