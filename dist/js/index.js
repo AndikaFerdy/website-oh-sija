@@ -94,19 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\n// @ts-ignore\n__webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\nvar service_worker_1 = __importDefault(__webpack_require__(/*! ./service-worker */ \"./lib/ts/service-worker.ts\"));\nwindow.addEventListener('load', function (evt) {\n    service_worker_1.default().then(function (success) {\n        console.log(success);\n    });\n    var headTypesetting = document.querySelector('.head-typesetting');\n    var text = 'Welcome';\n    var idx = 0;\n    setInterval(function () {\n        if (idx !== text.length) {\n            headTypesetting.textContent += text[idx++];\n        }\n    }, 100);\n});\n\n\n//# sourceURL=webpack:///./lib/ts/index.ts?");
-
-/***/ }),
-
-/***/ "./lib/ts/service-worker.ts":
-/*!**********************************!*\
-  !*** ./lib/ts/service-worker.ts ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n/**\n * Setup service worker.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nfunction setupServiceWorker() {\n    return new Promise(function (resolve, reject) {\n        if (!('serviceWorker' in navigator)) {\n            reject('Service worker is not available in your browser!');\n        }\n        navigator.serviceWorker\n            .register('./service-worker.js')\n            .then(function (success) {\n            resolve('Service worker has been activated!');\n        })\n            .catch(function (err) {\n            reject(\"Error registering service worker: \" + err);\n        });\n    });\n}\nexports.default = setupServiceWorker;\n\n\n//# sourceURL=webpack:///./lib/ts/service-worker.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n// @ts-ignore\r\n__webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\r\nwindow.addEventListener('load', function (evt) {\r\n    /* setupServiceWorker().then(success => {\r\n      console.log(success);\r\n    }); */\r\n    var headTypesetting = document.querySelector('.head-typesetting');\r\n    var text = 'Welcome';\r\n    var idx = 0;\r\n    setInterval(function () {\r\n        if (idx !== text.length) {\r\n            headTypesetting.textContent += text[idx++];\r\n        }\r\n    }, 100);\r\n});\r\n\n\n//# sourceURL=webpack:///./lib/ts/index.ts?");
 
 /***/ }),
 
