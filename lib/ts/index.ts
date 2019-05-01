@@ -1,6 +1,6 @@
 import { ActionBinder } from './ui/event/action-binder';
 // CSS imports
-require('bootstrap/dist/css/bootstrap.min.css');
+require('tachyons/css/tachyons.min.css');
 
 import { GenericFn } from './index.d';
 import setupServiceWorker from './service-worker';
