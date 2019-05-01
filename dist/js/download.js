@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.asd = 'somasod';\n\n\n//# sourceURL=webpack:///./lib/ts/download.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.asd = 'somasod';\r\n\n\n//# sourceURL=webpack:///./lib/ts/download.ts?");
 
 /***/ })
 

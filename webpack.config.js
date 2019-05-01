@@ -30,7 +30,8 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: false,
+              localIdentName: '[local]',
             },
           },
           {
@@ -57,7 +58,7 @@ module.exports = {
         '!manifest.json',
         '!service-worker.js',
         '!res/**',
-        '!css/**'
+        '!css/**',
       ],
     }),
     new HtmlWebpackPlugin({
