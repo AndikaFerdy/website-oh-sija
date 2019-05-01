@@ -24,9 +24,17 @@ function promisifySetInterval(
 
 window.addEventListener('load', evt => {
   ActionBinder.bindAll('[data-action]', 'data-action');
-  const images = $$('.inner-karya-container');
-  console.log(images);
-  setTimeout(() => {
-    showFromCenter(images as HTMLImageElement[]);
-  }, 300);
+});
+
+window.addEventListener('scroll', e => {
+  const els = $$('.animate-within-viewport');
+  if (els) {
+    els.forEach(el => {
+      const bounding = el.getBoundingClientRect();
+      if (bounding.top < 0 || bounding.left < 0) {
+        const images = $$('.inner-karya-container');
+        showFromCenter(images as HTMLImageElement[]);
+      }
+    });
+  }
 });
