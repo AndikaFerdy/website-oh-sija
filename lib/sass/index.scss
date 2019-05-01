@@ -4,6 +4,7 @@
 @import 'components';
 @import 'flow';
 @import 'scroll';
+@import 'colors';
 
 html, body {
   height: 100%;
@@ -17,19 +18,10 @@ body {
   line-height: 1.5;
 }
 
-.content-section {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-}
 
-.content-section--intro {
-  color: white;
-}
 
 .content-section--hasilKarya {
-  color: white;
 }
 
 .content-section--peluangKerja {
-  color: white;
 }
