@@ -25,20 +25,22 @@
 }
 
 .mid-mapel-container {
-  background-color: #b72563;
+}
+
+.inner-mapel-container {
   border-radius: 10px;
   color: white;
+  padding: 5px;
 }
 
 .content-section--mapel h3 {
   text-align: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0;
+.tkj-bg {
+  background-color: #b72563;
+}
+
+.sija-bg {
+  background-color: #f58f11;
 }
