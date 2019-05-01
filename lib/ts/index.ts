@@ -1,16 +1,14 @@
 import { AnimationAgent } from './ui/animation-agent';
 import { ActionBinder } from './ui/event/action-binder';
-<<<<<<< HEAD
-=======
 // CSS imports
 // require('tachyons/css/tachyons.min.css');
 require('../sass/index.scss');
 
->>>>>>> c43eee1794bfb90e69720bd613189f046d9d784a
 import { GenericFn } from './index.d';
 import setupServiceWorker from './service-worker';
 import { $$ } from './ui/utils-ui';
 import './ui/scroll';
+import { showFromCenter } from './ui/animation';
 
 // CSS imports
 require('../sass/index.scss');
@@ -26,4 +24,9 @@ function promisifySetInterval(
 
 window.addEventListener('load', evt => {
   ActionBinder.bindAll('[data-action]', 'data-action');
+  const images = $$('.content-section--hasilKarya img');
+  console.log(images);
+  setTimeout(() => {
+    showFromCenter(images as HTMLImageElement[]);
+  }, 2000);
 });
