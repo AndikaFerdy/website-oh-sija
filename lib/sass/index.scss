@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+
+@import 'variables';
+@import 'components';
+@import 'flow';
+@import 'scroll';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: $primary-font-color;
+  
+  font-family: 'Poppins', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}

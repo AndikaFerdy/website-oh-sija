@@ -30,7 +30,8 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: false,
+              localIdentName: '[local]',
             },
           },
           {
@@ -42,6 +43,11 @@ module.exports = {
       {
         test: /.ts$/,
         use: 'ts-loader',
+      },
+
+      {
+        test: /.(png|jpe?g)$/,
+        use: 'url-loader',
       },
     ],
   },
@@ -57,7 +63,7 @@ module.exports = {
         '!manifest.json',
         '!service-worker.js',
         '!res/**',
-        '!css/**'
+        '!css/**',
       ],
     }),
     new HtmlWebpackPlugin({
