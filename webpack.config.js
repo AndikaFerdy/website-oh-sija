@@ -57,6 +57,7 @@ module.exports = {
         '!manifest.json',
         '!service-worker.js',
         '!res/**',
+        '!css/**'
       ],
     }),
     new HtmlWebpackPlugin({
