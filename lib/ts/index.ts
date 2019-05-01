@@ -24,9 +24,9 @@ function promisifySetInterval(
 
 window.addEventListener('load', evt => {
   ActionBinder.bindAll('[data-action]', 'data-action');
-  const images = $$('.content-section--hasilKarya img');
+  const images = $$('.inner-karya-container');
   console.log(images);
   setTimeout(() => {
     showFromCenter(images as HTMLImageElement[]);
-  }, 2000);
+  }, 300);
 });

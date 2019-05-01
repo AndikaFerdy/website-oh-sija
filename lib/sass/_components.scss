@@ -38,11 +38,11 @@
 
 .inner-karya-container {
   text-align: center;
+  margin: 20px;
 }
 
-.inner-karya-container img {
+.inner-karya-container {
   opacity: 0;
-  width: 100%;
   -webkit-transition: 0.3s ease-in-out opacity;
   transition: 0.3s ease-in-out opacity;
 }
