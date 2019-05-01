@@ -1,9 +1,9 @@
-// @ts-ignore
+import { ActionBinder } from './ui/event/action-binder';
+// CSS imports
 require('bootstrap/dist/css/bootstrap.min.css');
 
+import { GenericFn } from './index.d';
 import setupServiceWorker from './service-worker';
-
-type GenericFn<T = any, U = any> = (e: T) => U;
 
 function promisifySetInterval(
   cb: (resolve: GenericFn, reject: GenericFn) => TimerHandler,
@@ -19,6 +19,8 @@ window.addEventListener('load', evt => {
     console.log(success);
   }); */
 
+  ActionBinder.bindAll('[data-action]', 'data-action');
+
   const headTypesetting = document.querySelector(
     '.head-typesetting'
   ) as HTMLHeadingElement;
@@ -28,16 +30,18 @@ window.addEventListener('load', evt => {
   let idx = 0;
 
   promisifySetInterval((resolve, reject) => {
-    return () => {
-      if (idx !== text.length) {
+    return () => {};
+    /* return () => {
+      if (idx != text.length) {
         displayedText += text[idx++];
         headTypesetting.textContent = displayedText;
       } else {
         resolve('done');
       }
-    };
+    }; */
   }, 100).then(success => {
-    promisifySetInterval((resolve, reject) => {
+    return () => {};
+    /* promisifySetInterval((resolve, reject) => {
       const text = displayedText.split('');
       return () => {
         if (text.length > 0) {
@@ -45,6 +49,6 @@ window.addEventListener('load', evt => {
           headTypesetting.textContent = text.join('');
         }
       };
-    }, 50);
+    }, 50); */
   });
 });
