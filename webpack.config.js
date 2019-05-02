@@ -12,19 +12,19 @@ module.exports = {
     filename: 'js/[name].js',
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
-          options: { presets: ['@babel/preset.env'] },
+          options: {
+            presets: ['@babel/preset.env']
+          },
         },
       },
       {
         test: /((.scss)|(.sass)|(.css))$/,
-        use: [
-          {
+        use: [{
             loader: 'style-loader',
           },
           {
@@ -64,6 +64,7 @@ module.exports = {
         '!service-worker.js',
         '!res/**',
         '!css/**',
+        '!vendor/**'
       ],
     }),
     new HtmlWebpackPlugin({

@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%= require('html-loader!./partials/head.html') %>
-  <body>
+<%= require('html-loader!./partials/head.html') %>
+
+<body>
+  <div class="fullpage">
     <%= require('html-loader!./partials/about.html') %> <%=
-    require('html-loader!./partials/mapel.html') %> <%=
-    require('html-loader!./partials/metode-belajar.html') %> <%=
-    require('html-loader!./partials/peluang-kerja.html')%> <%=
-    require('html-loader!./partials/hasil-karya.html')%>
-  </body>
+      require('html-loader!./partials/mapel.html') %> <%=
+      require('html-loader!./partials/metode-belajar.html') %> <%=
+      require('html-loader!./partials/peluang-kerja.html')%> <%=
+      require('html-loader!./partials/hasil-karya.html')%>
+  </div>
+
+  <div id="fp-nav" class="fp-right" style="margin-top: -43.5px;">
+    <ul>
+      <li data-menuanchor="about"><a href="#page1" class="active"><span
+            class="fp-sr-only">fullPage</span><span></span></a>
+        <div class="fp-tooltip fp-right">About</div>
+      </li>
+      <li data-menuanchor="mapel"><a href="#page2" class=""><span class="fp-sr-only">Open</span><span></span></a>
+        <div class="fp-tooltip fp-right">Apa yang kami pelajari</div>
+      </li>
+      <li data-menuanchor="metode-belajar"><a href="#page3" class=""><span
+            class="fp-sr-only">Easy</span><span></span></a>
+        <div class="fp-tooltip fp-right">Bagaimana kita belajar?</div>
+      </li>
+      <li data-menuanchor="peluang-kerja"><a href="#page4" class=""><span
+            class="fp-sr-only">Touch</span><span></span></a>
+        <div class="fp-tooltip fp-right">Peluang kerja</div>
+      </li>
+    </ul>
+  </div>
+</body>
+<script src="vendor/fullpage.min.js">
+
+</script>
+<script>
+  new fullpage(document.querySelector('.fullpage'), {
+    anchors: ['about', 'mapel', 'metode-belajar', 'peluang-kerja', 'hasil-karya'],
+    menu: '#fp-nav ul',
+    sectionSelector: '.content-section'
+  });
+
+</script>
+
 </html>
