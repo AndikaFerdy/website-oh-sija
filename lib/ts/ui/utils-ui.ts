@@ -1,8 +1,8 @@
 export function $(selector: string, parent = document) {
-  return document.querySelector(selector);
+  return parent.querySelector(selector);
 }
 
 export function $$(selector: string, parent = document) {
-  const els = document.querySelectorAll(selector);
+  const els = parent.querySelectorAll(selector);
   return els.length ? Array.from(els) : null;
 }

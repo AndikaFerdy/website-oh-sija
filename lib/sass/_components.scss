@@ -48,19 +48,62 @@
   -webkit-transition: 0.3s ease-in-out opacity;
   transition: 0.3s ease-in-out opacity;
 }
+
 // about-----------------------------
 
-.about-img-container{
+.about-img-container {
+  padding-top: 15%;
   border-radius: 20px;
 }
-.white-bg{
+
+.white-bg {
   background-color: white;
 }
 
-.tkj-logo{
+.tkj-logo {
   width: 70%;
 }
 
-.sija-logo{
+.sija-logo {
   width: 90%;
+}
+
+
+// content about
+.about-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+
+  background-color: #fff;
+  color: #373d3f;
+}
+
+.about-content__img {
+  width: 100%;
+}
+
+.about-content__img-container {
+  width: 40%;
+}
+
+.about-content__content {
+  width: 70%;
+}
+
+.back-button-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #373d3f;
+}
+
+.back-button {
+  border: 0;
+  background-color: transparent;
+}
+
+[id^="about-content"] {
+  position: relative;
 }

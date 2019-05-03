@@ -1,3 +1,73 @@
 .show {
   opacity: 1 !important;
 }
+
+
+@-webkit-keyframes scale-up {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+  }
+}
+
+
+@keyframes scale-up {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+  }
+}
+
+@-webkit-keyframes scale-down {
+  from {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-down {
+  from {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.scaleUp {
+  -webkit-animation-name: scale-up;
+  animation-name: scale-up;
+}
+
+.scaleUp-prop {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+}
+
+.scaleDown {
+  -webkit-animation-name: scale-down;
+  animation-name: scale-down;
+}
+
+.scaleDown-prop {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

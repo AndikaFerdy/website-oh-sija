@@ -14,7 +14,13 @@ export interface AnimationOptions {
   speed?: string;
   interruptible?: Boolean;
   repeat?: Boolean;
+  removeClassAfterExecuted?: Boolean;
+  removeAnimatedClassAfterExecuted?: Boolean;
 }
+
+setInterval(() => {
+  //  console.log(AnimationAgent.animationsOnGoing);
+}, 100);
 
 export const AnimationAgent = {
   Constants: {
@@ -35,6 +41,8 @@ export const AnimationAgent = {
       interruptible: false,
       speed: this.Constants.SPEED_FAST,
       repeat: false,
+      removeClassAfterExecuted: true,
+      removeAnimatedClassAfterExecuted: true,
     };
 
     opts = { ...defaultOpts, ...opts };
@@ -94,7 +102,15 @@ export const AnimationAgent = {
       element.addEventListener(
         'animationend',
         e => {
-          element.classList.remove(...(_animationName as string[]));
+          console.log('animationend');
+          if (opts.removeAnimatedClassAfterExecuted) {
+            element.classList.remove('animated');
+          }
+
+          _animationName.shift();
+          if (opts.removeClassAfterExecuted) {
+            element.classList.remove(...(_animationName as string[]));
+          }
 
           let animationIndex = UtilsArray.findObject(
             this.animationsOnGoing,
@@ -102,6 +118,14 @@ export const AnimationAgent = {
             { element }
           );
           this.animationsOnGoing.splice(animationIndex, 1);
+          setTimeout(() => {
+            const _animIdx = UtilsArray.findObject(this.animationsOnGoing, {
+              element,
+            });
+            if (_animIdx > -1) {
+              this.animationsOnGoing.splice(_animIdx, 1);
+            }
+          }, 100);
 
           resolve();
         },
