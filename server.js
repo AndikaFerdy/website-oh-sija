@@ -12,4 +12,4 @@ app.get('/', (req, res) => {
 const staticDirPath = path.resolve(__dirname, 'dist');
 app.use(express.static(staticDirPath));
 
-app.listen(port);
+app.listen(process.env.PORT || port);
