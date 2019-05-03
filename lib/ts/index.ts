@@ -26,7 +26,7 @@ window.addEventListener('load', evt => {
   ActionBinder.bindAll('[data-action]', 'data-action');
 });
 
-window.addEventListener('scroll', e => {
+/* window.addEventListener('scroll', e => {
   const els = $$('.animate-within-viewport');
   if (els) {
     els.forEach(el => {
@@ -37,4 +37,4 @@ window.addEventListener('scroll', e => {
       }
     });
   }
-});
+}); */
