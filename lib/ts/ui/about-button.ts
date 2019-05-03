@@ -37,9 +37,12 @@ function animateExpand(element: HTMLElement) {
       const target = ($(content) as HTMLElement).parentElement;
       if (target) {
         // @ts-ignore
+        const animEnter = target.dataset.animationName.split(',')[0];
+
+        // @ts-ignore
         target.style.display = 'flex';
         // @ts-ignore
-        AnimationAgent.animate(target, 'fadeInLeft').then(done => {
+        AnimationAgent.animate(target, animEnter).then(done => {
           resolve(done);
         });
       }
@@ -53,7 +56,8 @@ function animateCollapse(element: HTMLElement) {
     const target = ($(content) as HTMLElement).parentElement;
     if (target) {
       // @ts-ignore
-      AnimationAgent.animate(target, 'fadeOutLeft').then(done => {
+      const animOut = target.dataset.animationName.split(',')[1];
+      AnimationAgent.animate(target, animOut).then(done => {
         target.style.display = 'none';
 
         AnimationAgent.animate(element, 'scaleDown').then(done => {
