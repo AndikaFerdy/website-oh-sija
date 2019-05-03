@@ -1,17 +1,14 @@
-<section
-  class="content-section content-section--about bg-purple"
-  data-anchor="about"
->
-  <h1 class=" content-section__main-heading">About</h1>
+<section class="content-section content-section--about bg-purple" data-anchor="about">
   <div class="flex justify-center">
-    <section class="content-section content-section--about bg-purple">
+    <section>
       <h1 class="content-section__main-heading">Apa itu TKJ & SIJA?</h1>
       <div class="flex">
         <div class="outer-mapel-container">
           <div class="w-100 mid-mapel-container mv5">
             <div class="flex justify-around">
               <div class="w-30 inner-mapel-container mh4 mv4">
-                <div class="about-img-container white-bg w-100 h5">
+                <div id="image-button-tkj" class="about-img-container white-bg w-100 h5"
+                  data-target="about-content__tkj">
                   <img class="tkj-logo" src="../../res/img/tkj-logo.png" />
                 </div>
                 <div class="about-desc-container">
@@ -19,7 +16,8 @@
                 </div>
               </div>
               <div class="w-30 inner-mapel-container mh4 mv4">
-                <div class="about-img-container white-bg w-100 h5">
+                <div id="image-button-sija" class="about-img-container white-bg w-100 h5"
+                  data-target="about-content__sija">
                   <img class="sija-logo" src="../../res/img/sija-logo.png" />
                 </div>
                 <div class="about-desc-container">
@@ -32,4 +30,55 @@
       </div>
     </section>
   </div>
+  <<<<<<< HEAD <div class="about-content flex items-center justify-center" hidden="true" style="display: none">
+    <div class="back-button-container">
+      <button class="back-button" data-button-parent="image-button-tkj"><i class="fas fa-arrow-left"></i></button>
+    </div>
+    <div id="about-content__tkj">
+      <div class="flex">
+        <div class="w-15 flex justify-center">
+          <div class="about-content__img-container">
+            <img src="../../res/img/tkj-logo.png" class="about-content__img">
+          </div>
+        </div>
+        <div class="w-85 flex items-center">
+          <div class="about-content__content">
+            <h2>TEKNIK KOMPUTER DAN JARINGAN</h2>
+            <p>Sit do ad in enim eu. Velit duis nisi est ipsum. Dolore fugiat voluptate fugiat sunt ut ut sint
+              adipisicing
+              mollit non. Elit officia occaecat sint elit esse proident non pariatur amet et consequat cillum dolore
+              cillum. Consectetur est elit incididunt irure do irure proident minim amet velit velit ut ad consequat.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="about-content flex items-center justify-center" hidden="true" style="display: none">
+      <div class="back-button-container">
+        <button class="back-button" data-button-parent="image-button-sija"><i class="fas fa-arrow-left"></i></button>
+      </div>
+      <div id="about-content__sija">
+        <div class="flex">
+          <div class="w-15 flex justify-center">
+            <div class="about-content__img-container">
+              <img src="../../res/img/sija-logo.png" class="about-content__img">
+            </div>
+          </div>
+          <div class="w-85 flex items-center">
+            <div class="about-content__content">
+              <h2>SISTEM INFORMASI KASDSAH</h2>
+              <p>Sit do ad in enim eu. Velit duis nisi est ipsum. Dolore fugiat voluptate fugiat sunt ut ut sint
+                adipisicing
+                mollit non. Elit officia occaecat sint elit esse proident non pariatur amet et consequat cillum dolore
+                cillum. Consectetur est elit incididunt irure do irure proident minim amet velit velit ut ad consequat.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>

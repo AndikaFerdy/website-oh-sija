@@ -3,12 +3,14 @@ import { ActionBinder } from './ui/event/action-binder';
 // CSS imports
 // require('tachyons/css/tachyons.min.css');
 require('../sass/index.scss');
+require('animate.css/animate.min.css');
 
 import { GenericFn } from './index.d';
 import setupServiceWorker from './service-worker';
 import { $$ } from './ui/utils-ui';
 import './ui/scroll';
 import { showFromCenter } from './ui/animation';
+import './ui/about-button';
 
 // CSS imports
 require('../sass/index.scss');
@@ -26,7 +28,7 @@ window.addEventListener('load', evt => {
   ActionBinder.bindAll('[data-action]', 'data-action');
 });
 
-window.addEventListener('scroll', e => {
+/* window.addEventListener('scroll', e => {
   const els = $$('.animate-within-viewport');
   if (els) {
     els.forEach(el => {
@@ -37,4 +39,4 @@ window.addEventListener('scroll', e => {
       }
     });
   }
-});
+}); */
