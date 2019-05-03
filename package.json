@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production"
   },
@@ -30,6 +31,7 @@
   },
   "dependencies": {
     "disable-scroll": "^0.4.1",
+    "express": "^4.16.4",
     "fullpage.js": "^3.0.5"
   }
 }
