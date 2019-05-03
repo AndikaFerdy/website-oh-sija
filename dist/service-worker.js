@@ -3,10 +3,7 @@ const CACHE_NAME_DATA = 'ohsija-data-v0.1';
 const STATIC_FILES_CACHELIST = [
   '/',
   'index.html',
-  'download.html',
   'js/index.js',
-  'js/download.js',
-  'res/img/ss1.png',
 ];
 
 self.addEventListener('install', evt => {
