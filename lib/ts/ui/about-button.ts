@@ -1,7 +1,10 @@
 import { AnimationAgent } from './animation-agent';
 import { $, $$ } from './utils-ui';
 
-function getParentContainer(target: Element, current: Element): Element | null {
+export function getParentContainer(
+  target: Element,
+  current: Element
+): Element | null {
   if (current == target) {
     return current;
   }
@@ -63,6 +66,7 @@ function animateCollapse(element: HTMLElement) {
         AnimationAgent.animate(element, 'scaleDown').then(done => {
           element.classList.remove('scaleUp-prop');
           element.classList.add('scaleDown-prop');
+
           // @ts-ignore
           const elementsInside = $$('*', element) as HTMLElement[];
           elementsInside.forEach(el => {

@@ -8,6 +8,19 @@
 
 .image-button-container {}
 
+.about-img-container {
+  position: relative;
+  -webkit-box-shadow: 4px 13px 26px -8px rgba(55, 61, 63, 1);
+  box-shadow: 4px 13px 26px -8px rgba(55, 61, 63, 1);
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+  bottom: 0;
+}
+
+.about-img-container:hover {
+  bottom: 10px;
+}
+
 .outer-mapel-container {
   padding: 0px 150px;
   text-align: center;

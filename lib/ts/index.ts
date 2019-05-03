@@ -11,6 +11,7 @@ import { $$ } from './ui/utils-ui';
 import './ui/scroll';
 import { showFromCenter } from './ui/animation';
 import './ui/about-button';
+import './ui/easter-egg';
 
 // CSS imports
 require('../sass/index.scss');
